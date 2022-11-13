@@ -362,14 +362,14 @@ p {
 
 .project__card:hover .desc {
     opacity:1;
-    transition: all 0.5s cubic-bezier(0.68, 0.55, 0.265, 1.55);
+    transform: translateY(-10px);
+    transition: all 1.0s cubic-bezier(0.68, 0.55, 0.265, 1.55);
     transition-delay: 0.4s;
 }
 .project__card:hover .project__title {
     opacity:1;
     height: 4rem;
     transition: all 0.5s cubic-bezier(0.68, 0.55, 0.265, 1.55);
-
 }
 
 a {
@@ -385,12 +385,15 @@ a {
     height: 1.5rem;
     padding: 5px;
     width: 100%;
+    overflow:hidden;
+
 }
 .desc {
+    color:rgb(206, 205, 205);
     display: inline-block;
     font-size: 0.7rem;
     opacity:0;
-    line-height:0.9rem;
+    line-height:0.8rem;
     transition: all 0.3s cubic-bezier(0.68, 0.55, 0.265, 1.55);
 
 }
