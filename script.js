@@ -14,6 +14,10 @@ function hideScreens() {
     mainBody.children[2].classList.add('hidden');
     mainBody.children[3].classList.add('hidden');
     setTimeout(() => {
+        myProjects.scrollTo(0,0);
+        aboutMe.scrollTo(0,0);
+        myContacts.scrollTo(0,0);
+        home.scrollTo(0,0);
         mainBody.scrollTo(0,0);
     },1000)
 }

@@ -14,6 +14,14 @@
     /* position: sticky; */
 
 }
+
+* {
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    }
+*::-webkit-scrollbar {
+    width: 0; /* For Chrome, Safari, and Opera */
+    }
 body {
     background: #2e2633;
     height: 100vw;
@@ -239,15 +247,14 @@ h2 {
     margin: 1rem 0;
 }
 aside {
-    padding-top: 30px;
     background: #2e2633;
-    /* box-shadow: 0 9px 7px 1px rgba(0, 0, 0, 0.29); */
     font-size: ;
     height: 30%;
     overflow: hidden;
     position:absolute;
     top:135px;
     width: 25vw;
+    min-width: 275px;
     z-index: 4;
 }
 
@@ -259,7 +266,7 @@ aside ul {
     padding: 6px;
 }
 
-li {
+.nav {
     box-shadow: 0 6px 4px -4px #c2214f;
     font-size: 0.8rem;
     font-weight: 300;
@@ -267,28 +274,29 @@ li {
     padding: 15px 0;
     transition: all 0.4s ease-in-out;
 }
-li::before { 
+.nav::before { 
     content: '▫';
     margin-right: 0.8rem;
     padding-left: 3px;
 }
-li:hover::before { 
+.nav:hover::before { 
     content: '▪';
 }
 
-li:hover {
+.nav:hover {
     box-shadow: 0 6px 4px -4px rgb(242, 26, 69);
     cursor: pointer;
     padding-left: 14px;
 
 }
 .mainbody {
+    background: #6a5e72;
     border-radius: 15px;
-    box-shadow: inset 4px 4px 7px 2px rgba(0, 0, 0, 0.29);
-    height: calc(100vh - 135px);
+    box-shadow: inset 4px 4px 6px 4px rgba(0, 0, 0, 0.29);
+    height: calc(100vh - 115px);
     left: 25vw;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
     position: relative;
     top: 135px;
     width: 80vw;
@@ -297,13 +305,13 @@ li:hover {
 }
 
 .home, .mycontacts, .myprojects, .aboutme {
-    /* height: 70%; */
+    height: 100%;
     overflow-y:scroll;
-    padding: 20px;
-    padding-bottom: 90px;
+    padding: 0 6px 6px 20px;
+    margin-bottom: 0px;
     position: absolute;
     top: 0;
-    transform: translateX(1px);
+    /* transform: translateX(1px); */
     transition-delay: 0.4s;
     width: 90%;
     z-index:9;
@@ -336,12 +344,11 @@ p {
     display:flex;
     height: 200px;
     justify-content: center;
-
-    margin: 0 1rem 1rem 0.5rem;
+    margin: 0 0.9rem 0.9rem 0rem;
     position: relative;
     text-align: center;
     transition: all 0.5s cubic-bezier(0.68, 0.55, 0.265, 1.55);
-    width: 400px;
+    width: 360px;
 }
 
 .project__card:hover {
@@ -420,4 +427,76 @@ a {
 }
 #hangman {
     background-image: url(./img/hangman.jpg);
+}
+.contacts {
+    padding: 0;
+}
+.contact {
+    padding: 0 0 12px 0;
+    list-style-position: inside;
+}
+
+.contact::before {
+    content: "-";
+    opacity:0;
+}
+
+.contact:hover {
+    text-decoration: underline;
+}
+
+@media all and (max-width:605px) {
+    aside {
+        position: relative;
+
+        width: 100%;
+        overflow: hidden;
+    }
+    .navig {
+        /* font-size: 0.5rem; */
+        /* flex-direction: row; */
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        /* height: 60px; */
+    }
+    .mainbody {
+        left:0;
+        width: 100%;
+        height: calc(100vh - 185px);
+    }
+.projwrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+}
+
+@media all and (max-width:435px) {
+    .project__card {
+    width: 280px;
+    }
+    .logo {
+        height: 70px;
+    }
+    header {
+        height: 70px;
+    }
+    aside {
+        top: 70px;
+    }
+    .mainbody {
+        top:70px;
+    }
+    .project__title {
+        font-size: 0.9rem;
+        height: 40px;
+        /* padding: 0; */
+    }
+    svg {
+        height: 110px;
+    }
+    .nav {
+        padding: 6px 0;
+    }
 }
