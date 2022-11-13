@@ -35,7 +35,8 @@ body {
     }
 
     100% {
-        fill: blue;
+        fill: crimson;
+        stroke: crimson;
         transform: scale(1);
     }
 }
@@ -234,7 +235,9 @@ header {
     width: 100%;
     z-index: 8;
 }
-
+h2 {
+    margin: 1rem 0;
+}
 aside {
     padding-top: 30px;
     background: #2e2633;
