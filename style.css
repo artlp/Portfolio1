@@ -3,21 +3,14 @@
 .logo {
     align-items: center;
     background: #2e2633;
-    /* z-index: 8; */
-    background: #2e2633;
-    /* display: inline-block; */
-    /* outline: 1px solid red; */
     display:flex;
     justify-content: center;
     overflow: visible;
-    /* position: -webkit-sticky; */
-    /* position: sticky; */
-
 }
 
 * {
-    scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
     }
 *::-webkit-scrollbar {
     width: 0; /* For Chrome, Safari, and Opera */
@@ -32,8 +25,6 @@ body {
     0% {
         transform: scale(1);
         /* fill: red; */
-
-
     }
 
     50% {
@@ -141,6 +132,8 @@ body {
 #artur,
 #lipskii {
     fill: #c2214f;
+    transition: all 1.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
 }
 
 #circle {
@@ -163,24 +156,25 @@ body {
 
 #art {
     transition-delay: 0.15s;
-
-    /* transform: translateX(-35px); */
 }
 
 #lp {
     transition-delay: 0.15s;
-    /* transform: translateX(35px); */
 }
 
 .logo:hover #lp {
     opacity: 0;
     /* animation: lp 3s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+    transition: all 1.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
     transform: translateY(50px);
 }
 
 .logo:hover #art {
     opacity: 0;
     /* animation: art 3s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+    transition: all 1.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
     transform: translateY(-50px);
 }
 
@@ -188,16 +182,20 @@ body {
     fill: rgb(242, 26, 69);
     opacity: 1;
     /* animation: lipskii 3s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+    transition: all 1.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
     transform: translateX(100px);
-    transition-delay: 0.45s;
+    transition-delay: 0.3s;
 }
 
 .logo:hover #artur {
     fill: rgb(247, 54, 92);
     opacity: 1;
     /* animation: artur 3s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+    transition: all 1.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
     transform: translateX(-100px);
-    transition-delay: 0.45s;
+    transition-delay: 0.3s;
 }
 
 .logo:hover #circle {
@@ -252,11 +250,11 @@ aside {
     background: #2e2633;
     font-size: ;
     height: 80%;
+    min-width: 275px;
     overflow: hidden;
     position:absolute;
     top:135px;
     width: 25vw;
-    min-width: 275px;
     z-index: 4;
 }
 
@@ -297,29 +295,26 @@ aside ul {
     box-shadow: inset 2px 3px 4px 2px rgba(0, 0, 0, 0.29);
     height: calc(100vh - 115px);
     left: 25vw;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
     position: relative;
     top: 135px;
-    width: 80vw;
-    /* background-color: rgba(255, 255, 255, 0.169); */
-    z-index:8;
     transition: all 1.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    width: 80vw;
+    z-index:8;
 
 }
 
 .home, .mycontacts, .myprojects, .aboutme {
     height: 100%;
+    margin-bottom: 0px;
     overflow-y:scroll;
     padding: 0 6px 6px 20px;
-    margin-bottom: 0px;
     position: absolute;
     top: 0;
-    /* transform: translateX(1px); */
+    transition: all 1.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transition-delay: 0.4s;
     width: 90%;
     z-index:9;
-    transition: all 1.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
 }
 p {
@@ -332,7 +327,6 @@ p {
     max-width: 1200px;
 }
 .hidden {
-    /* display:none; */
     opacity:0;
     transform: translateX(-320px);
     transition-delay: 0s;
@@ -366,13 +360,15 @@ p {
 .project__card:hover .desc {
     opacity:1;
     transform: translateY(-10px);
-    transition: all 1.0s cubic-bezier(0.68, 0.55, 0.265, 1.55);
-    transition-delay: 0.4s;
+    transition: all 0.9s cubic-bezier(0.68, 0.55, 0.265, 1.55);
+
+    /* transition-delay: 0.6s; */
 }
 .project__card:hover .project__title {
-    opacity:1;
     height: 4rem;
-    transition: all 0.5s cubic-bezier(0.68, 0.55, 0.265, 1.55);
+    opacity:1;
+    transition: all 0.6s cubic-bezier(0.68, 0.55, 0.265, 1.55);
+
 }
 
 a {
@@ -386,30 +382,26 @@ a {
     color: #d5d2d3;
     font-size: 1rem;
     height: 1.5rem;
+    overflow:hidden;
     padding: 5px;
     width: 100%;
-    overflow:hidden;
+    transition: all 0.6s cubic-bezier(0.68, 0.55, 0.265, 1.55);
+
 
 }
 .desc {
     color:rgb(206, 205, 205);
     display: inline-block;
     font-size: 0.7rem;
-    opacity:0;
     line-height:0.8rem;
-    transition: all 0.3s cubic-bezier(0.68, 0.55, 0.265, 1.55);
-
-}
-.project__title:hover {
+    opacity:0;
+    transition: all 0.9s cubic-bezier(0.68, 0.55, 0.265, 1.55);
 }
 
 #calc {
     background-image: url(./img/calc.jpg);
 }
-/* #calc:hover::after {
-    content: "saasdasd";
-    position: absolute;
-} */
+
 #drums {
     background-image: url(./img/drums.jpg);
 }
@@ -441,8 +433,12 @@ a {
     padding: 0;
 }
 .contact {
-    padding: 0 0 12px 0;
     list-style-position: inside;
+    padding: 0 0 12px 0;
+    transition: all 0.4s ease-in-out;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
 }
 
 .contact::before {
@@ -451,16 +447,16 @@ a {
 }
 
 .contact:hover {
-    color: #c2214f !important;
-    scale:1.01;
+    transform: translateX(10px);
+    transition: all 0.4s ease-in-out;
 }
 
 @media all and (max-width:605px) {
     aside {
-        position: relative;
         height: 105px;
-        width: 100%;
         overflow: hidden;
+        position: relative;
+        width: 100%;
     }
     .navig {
         display:grid;
@@ -468,13 +464,13 @@ a {
         grid-template-rows: auto;
     }
     .mainbody {
+        height: calc(100vh - 185px);
         left:0;
         width: 100%;
-        height: calc(100vh - 185px);
     }
 .projwrapper {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
 }
 }
