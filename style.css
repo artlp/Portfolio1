@@ -451,7 +451,6 @@ a {
     transform: translateX(10px);
     transition: all 0.4s ease-in-out;
 }
-
 @media all and (max-width:605px) {
     aside {
         height: 105px;
@@ -493,8 +492,8 @@ a {
         top: 70px;
     }
     .mainbody {
-        top:70px;
         height: calc(100vh - 165px);
+        top:70px;
 
     }
     .project__title {
