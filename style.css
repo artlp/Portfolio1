@@ -469,20 +469,12 @@ a {
         left:0;
         width: 100%;
     }
-    .projwrapper {
-        /* align-items: center;
-        display: flex;
-        justify-content: center; */
-    }
     .nav {
         padding: 6px 0;
     }
 }
 
 @media all and (max-width:435px) {
-    .project__card {
-    width: 280px;
-    }
     .logo {
         height: 70px;
     }
