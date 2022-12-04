@@ -431,6 +431,9 @@ a {
 #hangman {
     background-image: url(./img/hangman.jpg);
 }
+#library {
+    background-image: url(./img/library.jpg);
+}
 .contacts {
     padding: 0;
 }
