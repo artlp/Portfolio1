@@ -434,6 +434,9 @@ a {
 #library {
     background-image: url(./img/library.jpg);
 }
+#tictactoe {
+    background-image: url(./img/tictactoe.jpg);
+}
 .contacts {
     padding: 0;
 }
