@@ -21,7 +21,6 @@ function hideScreens() {
         mainBody.scrollTo(0,0);
     },1000)
 }
-
 btnHome.addEventListener('click', () => {
     hideScreens();
     home.classList.remove('hidden');
